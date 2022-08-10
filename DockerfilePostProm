@@ -1,5 +1,5 @@
 # Use with the following command from the 'visualizers' directory: podman build -t <name> -f DockerfilePostProm .
-FROM quay.io/pbench/live-metric-visualizer:latest
+FROM quay.io/distributed-systems-analysis/live-metric-visualizer:latest
 
 ARG PROM_VERSION=2.18.1
 
