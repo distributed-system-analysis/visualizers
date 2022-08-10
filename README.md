@@ -1,5 +1,5 @@
 # LiveMetricVisualizer
-- A tool available to visualize Prometheus and PCP data
+- A tool available to visualize Prometheus and PCP data during live collection
 
 - Build locally with `podman build -t <name> -f DockerfileLive .`
 - Available at quay.io/distributed-systems-analysis/live-metric-visualizer
@@ -20,7 +20,7 @@
 
 
 # PromGrafVisualizer
-- A tool available to visualize Prometheus data collected through Pbench after a benchmark run
+- A tool available to visualize collected Prometheus data
 
 - Build locally with `podman build -t <name> -f DockerfilePostProm .`
 - Available at quay.io/distributed-systems-analysis/prom-graf-visualizer
@@ -31,11 +31,11 @@
   -   `podman run -p 3000:3000 -p 9090:9090 -v absolute/path/to/prometheus_data:/data:Z distributed-systems-analysis/prom-graf-visualizer`
 
 - NOTES: 
-  - Works with any other self-obtained prometheus data.
+  - Works with any self-obtained prometheus data.
   - Default Grafana credentials are: admin/admin
 
 # PCPGrafVisualizer
-- A tool available to visualize PCP data
+- A tool available to visualize collected PCP data
 
 - Build locally with `podman build -t <name> -f DockerfilePostPCP .`
 - Available at quay.io/distributed-systems-analysis/pcp-graf-visualizer
