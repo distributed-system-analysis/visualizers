@@ -3,7 +3,7 @@ FROM fedora:36
 
 WORKDIR /
 
-ARG GRAFANA_VERSION=7.3.6-1
+ARG GRAFANA_VERSION=9.0.7-1
 
 RUN dnf install -y wget python3-pip && \
     pip3 install requests && \
