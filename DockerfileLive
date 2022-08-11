@@ -1,5 +1,5 @@
 # Use with the following command from the 'visualizers' directory: podman build -t <name> -f DockerfileLive .
-FROM fedora:33
+FROM fedora:36
 
 WORKDIR /
 
