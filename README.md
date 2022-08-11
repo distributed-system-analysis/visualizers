@@ -1,3 +1,7 @@
+NOTE:
+- The current `latest` images (and `main` branch) are currently using Grafana 7
+- There are also Grafana 9 images available with the `grafana-9` tag (or via the `grafana-9` branch)
+
 # LiveMetricVisualizer
 - A tool available to visualize Prometheus and PCP data during live collection
 
