@@ -25,6 +25,7 @@ import json
 import requests
 import time
 import subprocess
+import shutil
 
 # Start the collector (if needed)
 collector = None
@@ -60,6 +61,8 @@ if metric_type == "pcp":
             print(args)
             subprocess.Popen(args)
 elif metric_type == "prom":
+    if not os.path.exists("/data/prometheus.yml"):
+        shutil.move("/defaults/prometheus.yml", "/data/prometheus.yml")
     cmd = [
         "./prometheus",
         "--config.file=/data/prometheus.yml",
