@@ -62,7 +62,7 @@ if metric_type == "pcp":
             subprocess.Popen(args)
 elif metric_type == "prom":
     if not os.path.exists("/data/prometheus.yml"):
-        shutil.move("/defaults/prometheus.yml", "/data/prometheus.yml")
+        shutil.copy2("/defaults/prometheus.yml", "/data/prometheus.yml")
     cmd = [
         "./prometheus",
         "--config.file=/data/prometheus.yml",
