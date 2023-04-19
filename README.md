@@ -6,11 +6,11 @@ NOTE:
 - A tool available to visualize Prometheus and PCP data during live collection
 
 - Build locally with `podman build -t <name> -f DockerfileLive .`
-- Available at quay.io/distributed-systems-analysis/live-metric-visualizer
+- Available at quay.io/distributed-system-analysis/live-metric-visualizer
 
 - Directions:
-  -   `podman pull distributed-systems-analysis/live-metric-visualizer`
-  -   `podman run --network host distributed-systems-analysis/live-metric-visualizer`
+  -   `podman pull distributed-system-analysis/live-metric-visualizer`
+  -   `podman run --network host distributed-system-analysis/live-metric-visualizer`
   -   To visualize a run on a remote host, add `-e HOST=<host>`
     - If prometheus is on a different host, it can be individually set with `-e PROM_HOST=<host>`
     - If pmproxy is on a different host, it can be individually set with `-e PM_HOST=<host>`
@@ -27,12 +27,12 @@ NOTE:
 - A tool available to visualize collected Prometheus data
 
 - Build locally with `podman build -t <name> -f DockerfilePostProm .`
-- Available at quay.io/distributed-systems-analysis/prom-graf-visualizer
+- Available at quay.io/distributed-system-analysis/prom-graf-visualizer
 - Preloaded dashboards for node-exporter and grafana
 
 - Directions:
-  -   `podman pull distributed-systems-analysis/prom-graf-visualizer`
-  -   `podman run -p 3000:3000 -p 9090:9090 -v absolute/path/to/prometheus_data:/data:Z distributed-systems-analysis/prom-graf-visualizer`
+  -   `podman pull distributed-system-analysis/prom-graf-visualizer`
+  -   `podman run -p 3000:3000 -p 9090:9090 -v absolute/path/to/prometheus_data:/data:Z distributed-system-analysis/prom-graf-visualizer`
 
 - NOTES: 
   - Works with any self-obtained prometheus data.
@@ -42,12 +42,12 @@ NOTE:
 - A tool available to visualize collected PCP data
 
 - Build locally with `podman build -t <name> -f DockerfilePostPCP .`
-- Available at quay.io/distributed-systems-analysis/pcp-graf-visualizer
+- Available at quay.io/distributed-system-analysis/pcp-graf-visualizer
 - Preloaded dashboards for pcp data visualization
 
 - Directions:
-  -   `podman pull distributed-systems-analysis/pcp-graf-visualizer`
-  -   `podman run --network host -v /<path>/<to>/<pcp_log_folder>/data:/var/log/pcp/pmlogger:Z distributed-systems-analysis/pcp-graf-visualizer`
+  -   `podman pull distributed-system-analysis/pcp-graf-visualizer`
+  -   `podman run --network host -v /<path>/<to>/<pcp_log_folder>/data:/var/log/pcp/pmlogger:Z distributed-system-analysis/pcp-graf-visualizer`
   - If you would rather use your own existing redis instance rather than have one launch internally:
     - You must specify redis host with `-e REDIS_HOST=<port>`
     - If not on the default port (6379), you can also add `-e REDIS_PORT=<port>`
